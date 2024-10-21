@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sağlıklı Yaşam ve Egzersiz Rehberi</title>
+    
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS (isteğe bağlı stil için) -->
+    <style>
+        .image{
+            border-radius: 50%;
+    width: 150px;
+    height: 150px;
+        }
+        body {
+            background-color: #f9f9f9;
+        }
+        .search-section {
+            margin-top: 50px;
+        }
+        .category-card {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+        }
+        .category-card:hover {
+            transform: scale(1.05);
+        }
+        .quick-answers {
+            margin-top: 40px;
+        }
+
+        .container {
+    margin: 0 auto; 
+/* Div'i konteyner içinde yatay olarak ortalar */
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.col-lg-4 {
+    display: inline-block;
+    text-align: center;
+    width: 30%; /* Sütunların genişliği */
+    margin: 0 10px; 
+/* Sütunlar arasındaki boşluk */
+
+}
+
+.gorsel-img {
+    max-width: 100%; 
+/* Görsellerin genişliği konteynırın genişliğini aşmaz */
+}
+    </style>
+</head>
+<body>
+    <div class="container search-section">
+        <!-- Başlık -->
+        <h1 class="text-center mb-4">Sağlıklı Yaşam ve Egzersiz Rehberi</h1>
+
+        <!-- Arama Çubuğu -->
+        <div class="d-flex justify-content-center mt-4">
+            <input type="text" class="form-control w-50" placeholder="Arama terimlerinizi girin...">
+            <button class="btn btn-success ms-2">Ara</button>
+        </div>
+
+        <!-- Kategorilere Göz At -->
+        <div class="text-center mt-4">
+            <h4>Ya da kategorilere göz atın</h4>
+        </div>
+
+        <!-- Kategori Kartları - Bootstrap Kullanımı -->
+        <div class="row">
+            <div class="col-lg-4">
+              <div>
+                <img class="image" src="https://images.pexels.com/photos/863977/pexels-photo-863977.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+              </div>
+              <h2 class="fw-normal">Egzersiz</h2>
+              <p>Farklı egzersiz önerileri ve günlük spor rehberlerine göz atın.</p>
+              <p><a class="btn btn-secondary" href="#">View details »</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+              <div>
+                <img class="image" src="https://images.pexels.com/photos/793759/pexels-photo-793759.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+              </div>
+              <h2 class="fw-normal">Sağlıklı Beslenme</h2>
+              <p>Sağlıklı besinlerle vücudunuzu güçlendirin. Enerji veren gıdalar hakkında bilgi alın.</p>
+              <p><a class="btn btn-secondary" href="#">View details »</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+             <div>
+                <img class="image" src="https://images.pexels.com/photos/3822621/pexels-photo-3822621.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+             </div>
+              <h2 class="fw-normal">Rahatlama</h2>
+              <p>Kaliteli uyku ve rahatlama teknikleri ile vücudunuzu yenileyin.</p>
+              <p><a class="btn btn-secondary" href="#">View details »</a></p>
+            </div><!-- /.col-lg-4 -->
+          </div>
+
+        <!-- Hızlı Yanıtlar (Accordion) - Bootstrap Accordion Kullanımı -->
+        <div class="quick-answers mt-5">
+            <h4>Hızlı Yanıtlar</h4>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Egzersiz yaparken nasıl başlamalıyım?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Egzersiz yapmaya başlarken önce hafif ısınma hareketleriyle başlayın. Kaslarınızı hazırlamak için 5-10 dakika yürüyüş yapabilirsiniz.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Hangi besinler enerji verir?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Enerji veren besinler arasında tam tahıllar, muz, yoğurt ve yeşil yapraklı sebzeler yer alır. Bu gıdalar, kaslarınızın daha verimli çalışmasını sağlar.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Uyku düzenimi nasıl iyileştirebilirim?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Uyku düzeninizi iyileştirmek için yatmadan önce ekranlardan uzak durun, düzenli uyuma saatleri belirleyin ve rahatlatıcı bir uyku rutini oluşturun.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
